@@ -1,9 +1,27 @@
+/*  스크롤에 상관 없이 네비게이션바를
+    고정하기 위해서  position 을 bottom에고정 하고 width를 100%
+    position: fixed;
+    bottom: 0;   
+    width: 100%; 
+
+    !!! 패딩때문에 넘어가버린 아이콘을 화면에 맞게 출력
+    box-sizing: border-box;
+*/
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(105, 99, 99, 0.5);
+}
+
 .nav__list {
   display: flex;
   justify-content: space-between;
 }
 
-.nav {
-  background-color: #f9f9fa;
-  padding: 10px 40px;
+nav__link {
+  color: #2e363e;
 }

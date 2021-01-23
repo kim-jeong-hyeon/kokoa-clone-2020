@@ -131,3 +131,10 @@ table {
 input:focus {
   outline: none;
 }
+
+/*아이콘의 색을 없애는 부분
+  계속 반복하지 않기위해 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
