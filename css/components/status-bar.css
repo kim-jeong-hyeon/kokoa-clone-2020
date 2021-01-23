@@ -22,6 +22,7 @@
   align-items: center;
 }
 
+/* 배터리에 좌우 마진을 줌 */
 .status-bar__column .fa-battery-full {
   margin: 0px 5px;
 }

@@ -7,6 +7,7 @@
     <title>Welcome to Kokoa Talk</title>
   </head>
   <body>
+    <!--status-bar 맨위에 시계와 베터리 부분-->
     <div class="status-bar">
       <div class="status-bar__column">
         <span>No Service</span>
@@ -22,6 +23,7 @@
       </div>
     </div>
 
+    <!-- header-->
     <header class="welcome-header">
       <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
       <p class="welcome-header__text">
@@ -29,13 +31,17 @@
       </p>
     </header>
 
-    <form id="login-form">
-      <input type="text" placeholder="Email or phone number" />
-      <input type="password" placeholder="Password" />
+    <!-- action과 method를 통해서 페이지를 이동함
+    get과 post 방식 get은 서버 없을 때 URL에 정보를 싣어서 전달함 post는 서버와통신할 때 사용함-->
+    <!-- placeholder에 required 설정하면 해당칸을 반드시 채워야만한다.-->
+    <form action="friends.html" method="GET" id="login-form">
+      <input name="username" type="text" placeholder="Email or phone number" />
+      <input name="password" type="password" required placeholder="Password" />
       <input type="submit" value="Log In" />
       <a href="#">Find Kokoa Account or Password</a>
     </form>
 
+    <!-- 아이콘 사용을 위한, 코드임-->
     <script
       src="https://kit.fontawesome.com/3ec44fe07b.js"
       crossorigin="anonymous"
