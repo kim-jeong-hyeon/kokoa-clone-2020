@@ -25,20 +25,31 @@
     </div>
 
     <!-- navigation var 만들기
-    단축키 nav>ul>li*4>a 4개의 네비게이션 만들기-->
-
-    <nav>
-      <ul>
-        <li>
-          <a href="friends.html"><i class="fas fa-user fa-lg"></i></a>
+    단축키 nav>ul>li*4>a 4개의 네비게이션 만들기
+    fa-lg 는 아이콘을 크게 만들어줌-->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html"
+            ><i class="fas fa-user fa-lg"></i
+          ></a>
         </li>
-        <li>
-          <a href="chat.html"><i class="far fa-comment fa-lg"></i></a>
+        <li class="nav__btn">
+          <a class="nav__link" href="chat.html"
+            ><i class="far fa-comment fa-lg"></i
+          ></a>
         </li>
-        <li>
-          <a href="#"><i class="fas fa-search fa-lg"></i></a>
+        <li class="nav__btn">
+          <a class="nav__link" href="#"><i class="fas fa-search fa-lg"></i></a>
         </li>
-        <li><a href="#">Find</a></li>
+        <li class="nav__btn">
+          <a class="nav__link" href="#"
+            ><i
+              class="fas fa-ellipsis-h fa-lg"
+              style="-webkit-user-select: auto"
+            ></i
+          ></a>
+        </li>
       </ul>
     </nav>
 
