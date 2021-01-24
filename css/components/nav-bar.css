@@ -22,6 +22,43 @@
   justify-content: space-between;
 }
 
-nav__link {
+.nav__link {
+  position: relative;
   color: #2e363e;
+}
+
+/* span은 높이와 넓이를 가질수 없다.
+따라서 display를 block으로 변경해야함
+사각형을 원으로 만들고 싶다면 border-radius에 사각형의
+width의 반을 준다.
+- 원안의 글자를  가운데로 맞추기 위해
+- position : absolute ->  원하는 위치에 자유롭게 배치 가능하도록 독립된 레이어로 만듦
+- position : absolute는 가장 가까운 relative 부모를 경계로 움직임
+- nav__notification의 부모를 nav_link로 변경*/
+.nav__notification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  display: block;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.nav__something {
+  background-color: tomato;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  display: flex;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
 }

@@ -1,4 +1,5 @@
 .status-bar {
+  /* 바를 상단에 고정시키기 위함*/
   position: fixed;
   top: 0;
   width: 100%;

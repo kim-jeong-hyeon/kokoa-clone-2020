@@ -24,6 +24,36 @@
       </div>
     </div>
 
+    <header class="screen-header">
+      <h1 class="screen-header__title">Friends</h1>
+      <div class="screen-header__icons">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="fas fa-music fa-lg"></i></span>
+        <span><i class="fas fa-cog fa-lg"></i></span>
+      </div>
+    </header>
+
+    <a id="friends-display-link">
+      <i class="fas fa-info-circle"></i> Friend's Names Display
+      <i class="fas fa-chevron-right fa-xs"></i>
+    </a>
+
+    <!-- 한번에 여러개 만들기
+    user-component__column*2-->
+    <div class="user-component">
+      <div class="user-component__column">
+        <img
+          src="https://avatars.githubusercontent.com/u/50725996?s=460&u=8c8d68aaac5916d1736d07e7a9db4674c457ecb8&v=4"
+          class="user-component__avatar"
+        />
+        <div class="user-component__text">
+          <h4 class="user-component__title">JeongHyeon</h4>
+          <h6 class="user-component__subtitle">this text whatever</h6>
+        </div>
+      </div>
+      <div class="user-component__column"></div>
+    </div>
+
     <!-- navigation var 만들기
     단축키 nav>ul>li*4>a 4개의 네비게이션 만들기
     fa-lg 는 아이콘을 크게 만들어줌-->
@@ -35,20 +65,22 @@
           ></a>
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="chat.html"
-            ><i class="far fa-comment fa-2x"></i
+          <a class="nav__link" href="chat.html">
+            <span class="nav__notification">1</span>
+            <i class="far fa-comment fa-2x"></i
           ></a>
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="#"><i class="fas fa-search fa-2x"></i></a>
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="#"
-            ><i
+          <a class="nav__link" href="#">
+            <i
               class="fas fa-ellipsis-h fa-2x"
               style="-webkit-user-select: auto"
-            ></i
-          ></a>
+            ></i>
+            <span class="nav__something"></span>
+          </a>
         </li>
       </ul>
     </nav>
