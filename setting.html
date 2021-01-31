@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 주소칸 상단 표시-->
+    <title>Settings - Kokoa Clone</title>
+  </head>
+  <body>
+    <!--status-bar 맨위에 시계와 베터리 부분-->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <!--header.alt-header>div.alt-header__column*3
+    class id 포함하여 한번에 만들기-->
+
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="more.html">
+          <i class="fas fa-angle-left fa-3x"></i>
+        </a>
+      </div>
+
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">Settings</h1>
+      </div>
+
+      <div class="alt-header__column">
+        <i class="fas fa-search fa-2x"></i>
+      </div>
+    </header>
+
+    <main class="main-screen">
+      <ul class="settings-list">
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fas fa-bullhorn"></i>
+            <sapn>Notice</sapn>
+          </div>
+          <div class="settings__setting-column"></div>
+        </li>
+
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fas fa-flask" style="-webkit-user-select: auto"></i>
+            <sapn>Kokoa Lab</sapn>
+          </div>
+          <div class="settings__setting-column"></div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fas fa-info-circle"></i>
+            <sapn>Version</sapn>
+          </div>
+          <div class="settings__setting-column">Latest Version</div>
+        </li>
+      </ul>
+    </main>
+
+    <!-- navigation var 만들기
+    단축키 nav>ul>li*4>a 4개의 네비게이션 만들기
+    fa-lg 는 아이콘을 크게 만들어줌-->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html"
+            ><i class="far fa-user fa-2x" style="-webkit-user-select: auto"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notification badge">1</span>
+            <i class="far fa-comment fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html"
+            ><i class="fas fa-search fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <i
+              class="fas fa-ellipsis-h fa-2x"
+              style="-webkit-user-select: auto"
+            ></i>
+            <span class="nav__something"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 아이콘 사용을 위한, 코드임-->
+    <script
+      src="https://kit.fontawesome.com/3ec44fe07b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

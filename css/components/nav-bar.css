@@ -31,6 +31,7 @@
 따라서 display를 block으로 변경해야함
 사각형을 원으로 만들고 싶다면 border-radius에 사각형의
 width의 반을 준다.
+
 - 원안의 글자를  가운데로 맞추기 위해
 - position : absolute ->  원하는 위치에 자유롭게 배치 가능하도록 독립된 레이어로 만듦
 - position : absolute는 가장 가까운 relative 부모를 경계로 움직임

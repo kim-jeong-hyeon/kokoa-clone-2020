@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="css/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 주소칸 상단 표시-->
-    <title>Friends - Kokoa Talk</title>
+    <title>Chat w/ Nico - Kokoa Clone</title>
   </head>
-  <body>
+  <body id="chat-screen">
     <!--status-bar 맨위에 시계와 베터리 부분-->
     <div class="status-bar">
       <div class="status-bar__column">
@@ -23,72 +23,44 @@
         <i class="fas fa-bolt"></i>
       </div>
     </div>
+    <!--header.alt-header>div.alt-header__column*3
+    class id 포함하여 한번에 만들기-->
 
-    <header class="screen-header">
-      <h1 class="screen-header__title">Chats</h1>
-      <div class="screen-header__icons">
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="chats.html">
+          <i class="fas fa-angle-left fa-3x"></i>
+        </a>
+      </div>
+
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">JeongHyeon</h1>
+      </div>
+
+      <div class="alt-header__column">
         <span><i class="fas fa-search fa-lg"></i></span>
-        <span><i class="far fa-comment-dots fa-lg"></i></span>
-        <span><i class="fas fa-music fa-lg"></i></span>
-        <span><i class="fas fa-cog fa-lg"></i></span>
+        <span
+          ><i class="fas fa-bars fa-lg" style="-webkit-user-select: auto"></i
+        ></span>
       </div>
     </header>
 
-    <!-- 한번에 여러개 만들기
-    user-component__column*2-->
-    <main class="main-screen">
-      <div class="user-component">
-        <div class="user-component__column">
-          <img
-            src="https://avatars.githubusercontent.com/u/50725996?s=460&u=8c8d68aaac5916d1736d07e7a9db4674c457ecb8&v=4"
-            class="user-component__avatar user-component__avatar"
-          />
-          <div class="user-component__text">
-            <h4 class="user-component__title">JeongHyeon</h4>
-            <h6 class="user-component__subtitle">
-              Pleas check My Kakao Account info
-            </h6>
+    <main class="main-screen main-chat">
+      <div class="chat__timestamp">Tuesday, June 30, 2020</div>
+
+      <div class="message-row">
+        <img
+          src="https://avatars.githubusercontent.com/u/50725996?s=460&u=8c8d68aaac5916d1736d07e7a9db4674c457ecb8&v=4"
+        />
+        <div class="message-row__content">
+          <span class="message__author">JeongHyeon</span>
+          <div class="message__info">
+            <span class="message__bubble">Hi!</span>
+            <span class="message_time">21:27</span>
           </div>
-        </div>
-        <div class="user-component__column">
-          <span class="user-componet__time">21:22</span>
-          <div class="badge">1</div>
         </div>
       </div>
     </main>
-
-    <!-- navigation var 만들기
-    단축키 nav>ul>li*4>a 4개의 네비게이션 만들기
-    fa-lg 는 아이콘을 크게 만들어줌-->
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__btn">
-          <a class="nav__link" href="friends.html"
-            ><i class="far fa-user fa-2x" style="-webkit-user-select: auto"></i
-          ></a>
-        </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="chat.html">
-            <span class="nav__notification badge">1</span>
-            <i class="fas fa-comment fa-2x"></i
-          ></a>
-        </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="find.html"
-            ><i class="fas fa-search fa-2x"></i
-          ></a>
-        </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="more.html">
-            <i
-              class="fas fa-ellipsis-h fa-2x"
-              style="-webkit-user-select: auto"
-            ></i>
-            <span class="nav__something"></span>
-          </a>
-        </li>
-      </ul>
-    </nav>
 
     <!-- 아이콘 사용을 위한, 코드임-->
     <script
