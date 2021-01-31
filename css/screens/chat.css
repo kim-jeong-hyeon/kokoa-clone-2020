@@ -113,3 +113,77 @@ flex-direction : row-reverse;/
 .message-row-own .message__info {
   flex-direction: row-reverse;
 }
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  /*  padding이 아이콘을 가리고 있는 것을 해결하기 위함*/
+  box-sizing: border-box;
+  align-items: center;
+}
+
+/*  input위에 아이콘을 올리기위해 
+    .reply .reply__column은 반드시 
+    position:relative 되야 함
+    즉 부모를 바꾸어주는 과정.
+*/
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+/* 모든아이콘 투명도*/
+.reply i {
+  opacity: 0.5;
+}
+
+.reply input {
+  /* 그냥하면 작동되지 않는다.
+  이유는 reply__column이 width를 가지고 있지 않아서 
+  column에 width를 줘야 input에 width를 주는 것이 가능해짐*/
+  padding: 12px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+}
+
+/*  direct Child만 이동 시키기 위함 > 사용
+    input과 아이콘을 동시에 이동시키고
+    조금더 조절하여 input을 다른곳으로 이동
+*/
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: -3px;
+  top: 2px;
+}
+
+.reply__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
+
+.reply__column button:focus .reply__column button:active {
+  outline: none;
+}
