@@ -50,6 +50,7 @@ z-index가 클수록 위로 올라온다.
   height: 50px;
   border-radius: 50%;
   margin-right: 15px;
+  margin-bottom: 25px;
 }
 
 .message__author {
@@ -78,4 +79,37 @@ z-index가 클수록 위로 올라온다.
 .message__time {
   opacity: 0.8;
   font-size: 13px;
+}
+
+.message-row-own {
+  justify-content: flex-end;
+}
+
+.message-row-own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+/*flex children의 위치를 바꾸기위해
+order를 사용함
+시간의 위치를 말풍선 우측에서 좌측으로 이동하기 위함
+다소 코드이 길이가 길어지는 문제점
+.message-row-own .message__bubble {
+  order: 1;
+}
+
+.message-row-own .message__time {
+  order: 0;
+}
+*/
+
+/*말풍선 옆 시간을 이동시키는 좀더 짧은 코드*
+flex-direction : row-reverse;/
+*/
+
+.message-row-own .message__info {
+  flex-direction: row-reverse;
 }
