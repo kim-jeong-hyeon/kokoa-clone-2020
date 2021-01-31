@@ -37,4 +37,45 @@ z-index가 클수록 위로 올라온다.
   background-color: #92a4b2;
   padding: 15px;
   border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.message__author {
+  opacity: 0.8;
+  font-size: 13px;
+  margin-bottom: 5px;
+  /* span을 block으로 만들어줌 
+  inline속성을 가진 span은 height와 width를 가질 수가 없음.
+  block은 다른요소가 옆에 올 수 있음*/
+  display: block;
+}
+.message__bubble {
+  background-color: white;
+  padding: 13px;
+  border-radius: 15px;
+  /*말풍선처럼 끝을 뾰족하게한다.*/
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__time {
+  opacity: 0.8;
+  font-size: 13px;
 }
