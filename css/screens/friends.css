@@ -30,3 +30,18 @@
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.5);
 }
+
+/*  splash img가 화면의 맨위로 올라오게 설정해야 함
+*/
+#splash-screen {
+  background-color: var(--yellow);
+  /* absolute는 가장 가까운 부모에 맞춰 정렬 */
+  position: absolute;
+  width: 100vh;
+  height: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 132px;
+}
