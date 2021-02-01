@@ -32,7 +32,25 @@
 }
 
 /*  splash img가 화면의 맨위로 올라오게 설정해야 함
+    css는 화면 전체를 사라지게 할 수는 없다.
+    animation이 끝나면 다시 원래대로 돌아온다.
 */
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    /*  visibility: hidden 해줌으로 클릭가능해짐 a
+        html은 유지하고 
+        hidden은 단지 마우스 클릭만 가능하게해줌 
+        완전히 사라지게 하려면 js를 사용해야 함 */
+    visibility: hidden;
+  }
+}
+
 #splash-screen {
   background-color: var(--yellow);
   /* absolute는 가장 가까운 부모에 맞춰 정렬 */
@@ -44,4 +62,13 @@
   justify-content: center;
   align-items: center;
   font-size: 132px;
+
+  /*  화면이 사라졌다가 다시 돌아감
+      이를 해결하기 위해 forwards 키워드를 추가
+      forwards는 마지막 animaiton상태로 돌아가 유지하게 해줌 
+      하지만 화면이 사라져도 유지되므로 원래기능 클릭이 되지 않는 문제점*/
+  animation: hideSplashScreen 1s ease-in-out forwards;
+
+  /* animation이 지연되고 2초뒤 사람짐 */
+  animation-delay: 2s;
 }
